@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LeveFit — conteúdos sobre alimentação equilibrada, treinos e hábitos saudáveis.">
+  <title>LeveFit | Alimentação • Treinos • Hábitos saudáveis</title>
+  <style>
+    :root{
+      --green:#16a34a; --green-dark:#0f7a36; --lime:#d9f99d;
+      --dark:#102018; --muted:#5f6f66; --bg:#f7fbf8; --white:#fff;
+      --shadow:0 18px 50px rgba(16,32,24,.10); --radius:24px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--dark);background:var(--bg);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .top{background:#102018;color:#fff;text-align:center;padding:10px 16px;font-size:14px;font-weight:700}
+    nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #e7eee9}
+    .navin{max-width:1120px;margin:auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font-size:26px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--green)}
+    .links{display:flex;gap:24px;font-weight:700;font-size:14px}.links a:hover{color:var(--green)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:0;cursor:pointer;border-radius:999px;padding:14px 23px;font-weight:900;transition:.2s}
+    .btn:hover{transform:translateY(-2px)}
+    .primary{background:var(--green);color:white;box-shadow:0 10px 24px rgba(22,163,74,.25)}
+    .dark{background:var(--dark);color:#fff}
+    .hero{max-width:1120px;margin:auto;padding:76px 20px 70px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-block;background:#e8f8ed;color:var(--green-dark);padding:8px 13px;border-radius:999px;font-weight:900;font-size:13px;margin-bottom:18px}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.02;letter-spacing:-3px;margin-bottom:22px}
+    h1 span{color:var(--green)}
+    .hero p{font-size:19px;color:var(--muted);max-width:620px;margin-bottom:28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-card{background:linear-gradient(145deg,#d9f99d,#86efac);border-radius:34px;padding:28px;min-height:390px;display:flex;align-items:flex-end;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:270px;height:270px;border-radius:50%;background:rgba(255,255,255,.48);right:-70px;top:-70px}
+    .hero-card:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.35);left:-65px;bottom:-65px}
+    .cardtext{position:relative;z-index:1;background:rgba(255,255,255,.84);border-radius:22px;padding:22px;width:100%;backdrop-filter:blur(8px)}
+    .cardtext strong{font-size:25px;display:block;margin-bottom:5px}
+    section{padding:78px 20px}.container{max-width:1120px;margin:auto}
+    .center{text-align:center}.center p{max-width:650px;margin:10px auto 0;color:var(--muted)}
+    h2{font-size:38px;letter-spacing:-1.5px;line-height:1.1}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+    .feature{background:#fff;border:1px solid #e7eee9;border-radius:var(--radius);padding:28px;box-shadow:0 10px 30px rgba(16,32,24,.05)}
+    .icon{font-size:34px;margin-bottom:14px}.feature h3{font-size:20px;margin-bottom:7px}.feature p{color:var(--muted)}
+    .promo{background:var(--dark);color:#fff;border-radius:32px;padding:45px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}
+    .promo p{color:#c8d5cd;margin-top:8px}.promo .btn{background:#b8f34a;color:#102018}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+    .step{background:#fff;border-radius:20px;padding:25px;border:1px solid #e7eee9}.num{font-size:13px;font-weight:900;color:var(--green);margin-bottom:8px}
+    .cta{text-align:center;background:#e8f8ed}.cta p{color:var(--muted);max-width:600px;margin:12px auto 24px}
+    footer{background:#102018;color:#dce8e1;padding:35px 20px}.foot{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot small{color:#9eb0a5}
+    @media(max-width:800px){
+      .links{display:none}.hero{grid-template-columns:1fr;padding-top:55px}.hero-card{min-height:300px}
+      .grid,.steps{grid-template-columns:1fr}.promo{grid-template-columns:1fr;padding:32px}
+      h1{letter-spacing:-2px}.hero p{font-size:17px}
+    }
+  </style>
+</head>
+<body>
+  <div class="top">🔥 OFERTA ESPECIAL — comece seu projeto LeveFit hoje</div>
+
+  <nav>
+    <div class="navin">
+      <a class="logo" href="#">Leve<span>Fit</span></a>
+      <div class="links">
+        <a href="#alimentacao">Alimentação</a>
+        <a href="#treinos">Treinos</a>
+        <a href="#conteudo">Conteúdos</a>
+      </div>
+      <a class="btn primary" href="#oferta">Aproveitar oferta</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">ALIMENTAÇÃO • TREINOS • HÁBITOS</div>
+        <h1>Seu próximo passo começa <span>hoje.</span></h1>
+        <p>Conteúdos práticos para ajudar você a construir uma rotina mais equilibrada, com alimentação consciente, movimento e hábitos saudáveis.</p>
+        <div class="actions">
+          <a class="btn primary" href="#oferta">🚀 Quero começar</a>
+          <a class="btn dark" href="#conteudo">Conhecer o LeveFit</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="cardtext">
+          <strong>LeveFit</strong>
+          <span>Organize sua rotina. Movimente-se. Cuide de você.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="alimentacao">
+      <div class="container center">
+        <h2>Uma rotina mais leve e equilibrada</h2>
+        <p>Informação simples para transformar pequenas escolhas em hábitos consistentes.</p>
+        <div class="grid">
+          <article class="feature"><div class="icon">🥗</div><h3>Alimentação</h3><p>Ideias e orientações gerais para uma alimentação mais equilibrada e consciente.</p></article>
+          <article class="feature" id="treinos"><div class="icon">🏋️</div><h3>Treinos</h3><p>Conteúdos para quem quer incluir mais movimento e atividade física na rotina.</p></article>
+          <article class="feature"><div class="icon">🎯</div><h3>Hábitos</h3><p>Estratégias simples para criar uma rotina sustentável e manter o foco.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta">
+      <div class="container">
+        <div class="promo">
+          <div>
+            <div class="eyebrow" style="background:#1c3828;color:#b8f34a">CONDIÇÃO ESPECIAL</div>
+            <h2>Comece seu projeto LeveFit</h2>
+            <p>Aproveite a condição promocional atual e dê o primeiro passo para uma rotina mais saudável.</p>
+          </div>
+          <a class="btn" href="COLE_AQUI_SEU_LINK_DE_CHECKOUT" target="_blank" rel="noopener">🛒 COMPRAR AGORA</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="conteudo">
+      <div class="container center">
+        <h2>Comece de um jeito simples</h2>
+        <p>Sem promessas milagrosas: informação, consistência e hábitos que façam sentido para sua rotina.</p>
+        <div class="steps">
+          <div class="step"><div class="num">01 — CONHEÇA</div><h3>Escolha seu foco</h3><p>Explore os conteúdos de alimentação, treinos e hábitos.</p></div>
+          <div class="step"><div class="num">02 — ORGANIZE</div><h3>Monte sua rotina</h3><p>Use as informações para estruturar uma rotina possível para você.</p></div>
+          <div class="step"><div class="num">03 — COMECE</div><h3>Dê o primeiro passo</h3><p>Consistência é construída com pequenas ações repetidas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Chega de deixar para depois.</h2>
+        <p>Organize sua alimentação, movimente seu corpo e construa hábitos melhores.</p>
+        <a class="btn primary" href="#oferta">🔥 APROVEITAR OFERTA</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div><strong>LeveFit</strong><br><small>Alimentação • Treinos • Hábitos saudáveis</small></div>
+      <small>© 2026 LeveFit. Conteúdo informativo.</small>
+    </div>
+  </footer>
+</body>
+</html>
